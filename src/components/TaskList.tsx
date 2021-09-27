@@ -45,7 +45,9 @@ export function TaskList() {
   }
 
   function handleRemoveTask(id: number) {
-    // Remova uma task da listagem pelo ID
+    setTasks(
+      tasks.filter(task => task.id !== id)
+    )
   }
 
   return (
@@ -88,7 +90,6 @@ export function TaskList() {
               </button>
             </li>
           ))}
-          
         </ul>
       </main>
     </section>
